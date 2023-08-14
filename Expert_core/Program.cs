@@ -30,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=ExpertResumes}/{action=Index}/{id?}");
+    pattern: "{controller=ExpertTaskLists}/{action=Index}/{id?}");
 
 app.Run();
