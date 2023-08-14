@@ -47,6 +47,7 @@ namespace Expert_core.Controllers
         // GET: ExpertRatings/Create
         public IActionResult Create()
         {
+            ViewBag.id = 4;
             return View();
         }
 

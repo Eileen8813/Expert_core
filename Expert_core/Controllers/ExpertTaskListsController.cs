@@ -167,7 +167,7 @@ namespace Expert_core.Controllers
         }
 
         // GET: ExpertTaskLists/Create
-        public IActionResult Create()
+        public IActionResult Create()//從履歷連委託單
         {
             ViewData["PaymentId"] = new SelectList(_context.Payments, "PaymentId", "PaymentId");
             ViewData["PaymentDateId"] = new SelectList(_context.PaymentDates, "PaymentDateId", "PaymentDateId");

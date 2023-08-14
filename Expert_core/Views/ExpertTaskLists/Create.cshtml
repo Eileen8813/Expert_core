@@ -2,16 +2,15 @@
 
 @{
     ViewData["Title"] = "Create";
+    
 }
 
 <form asp-action="Create">
-    <div class="expertlisttitle">
-        <p class="col-7 ">委託單</p>
-
-    </div>
+  
+    <h2 class="pt-2">委託單</h2>
     <div class="container">
 
-        <div class="expertlsit mx-auto">
+        <div class="mx-auto">
 
             <div class="mx-auto w-70 p-5">
                 <div class="mb-3 form-control-lg">
@@ -139,6 +138,10 @@
                             <input type="submit" name="Create" value="送出委託" class="btn btn-outline-secondary" id="submit" placeholder="Password">
 
                     </div>
+                        <div class="form-floating col-3 mx-auto p-3">
+                           
+                            @Html.ActionLink("取消","Details","ExpertResumes",new {  id="4"+"?"+"details" },new{ @class="btn btn-outline-secondary" })
+                        </div>
                 </div>
             </div>
         </div>
@@ -147,9 +150,7 @@
         </form>
 
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

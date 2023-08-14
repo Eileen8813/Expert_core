@@ -79,7 +79,7 @@
                     <td>修改</td>
                     <td>委託對象</td>
                     <td>案件編號(隱藏)</td>
-                    <td>委託內容</td>
+                    <td class="w-auto">委託內容</td>
                     <td>委託截止日</td>
                     <td>委託期限-起</td>
                     <td>委託期限-訖</td>
@@ -93,8 +93,8 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                                <td>
-                                    @Html.ActionLink("修改/送出", "DetailsAlert", "ExpertTaskLists", null, new {@class="btnResume" })
+                                <td style="width:100px; padding:0;padding-block-start:5px">
+                                    @Html.ActionLink("修改/送出", "DetailsAlert", "ExpertTaskLists", null, new {@class="btn btn-outline-secondary" })
                                 </td>
                             <td> @Html.DisplayFor(modelItem => item.AccountId)</td>
 
@@ -146,9 +146,9 @@
                             
 
                         <tr>
-                                
-                                <td>
-                                    @Html.ActionLink("修改/送出", "DetailsAlert", "ExpertTaskLists", null, new {@class="btnResume" })
+
+                                <td style="width:100px; padding:0;padding-block-start:5px">
+                                    @Html.ActionLink("修改/送出", "DetailsAlert", "ExpertTaskLists", null, new {@class="btn btn-outline-secondary" })
                                 </td>
                             <td> @Html.DisplayFor(modelItem => item.AccountId)</td>
                            
@@ -156,27 +156,28 @@
                                 @if(item.CaseStatusId!=null){
                                 if ((int)item.CaseStatusId == 17)
                                 {
-                                <td>
-                                    @Html.ActionLink("專家案件進行中", "Index", "ExpertRatings", null, new {@class="btnResume" })
-                                </td>
+                               
+                                        <td style="width:100px; padding:0;padding-block-start:5px">
+                                            @Html.ActionLink("專家案件進行中", "Index", "ExpertRatings", null, new {@class="btn btn-outline-secondary" })
+                                        </td>
                                 }
                                 else if ((int)item.CaseStatusId == 18)
                                 {
-                                <td>
-                                    @Html.ActionLink("專家案件已完成", "Index", "ExpertRatings", null, new {@class="btnResume" })
-                                </td>
+                                        <td style="width:100px; padding:0;padding-block-start:5px">
+                                            @Html.ActionLink("沒有回應", "Index", "ExpertRatings", null, new {@class="btn btn-outline-secondary" })
+                                        </td>
                                 }
                                     else
                                     {
-                                        <td>
-                                            @Html.ActionLink("沒有對應", "Index", "ExpertRatings", null, new {@class="btnResume" })
+                                        <td style="width:100px; padding:0;padding-block-start:5px">
+                                            @Html.ActionLink("沒有回應", "Index", "ExpertRatings", null, new {@class="btn btn-outline-secondary" })
                                         </td>
                                     }
                                 }
                                 else
                                 {
-                                    <td>
-                                        @Html.ActionLink("專家尚未回應", "Index", "ExpertRatings", null, new {@class="btnResume" })
+                                    <td style="width:100px; padding:0;padding-block-start:5px">
+                                        @Html.ActionLink("沒有回應", "Index", "ExpertRatings", null, new {@class="btn btn-outline-secondary" })
                                     </td>
                                 }
                                 
@@ -227,7 +228,10 @@
                 <tbody>
                     @foreach (var item in Model) {
                     <tr>
-                                <td>@Html.ActionLink("檢視","DetailsView","ExpertTaskLists",null,new{ @class="btnResume pt-3"} )</td>
+                                <td style="width:100px; padding:0;padding-block-start:5px">
+                                    @Html.ActionLink("檢視","DetailsView","ExpertTaskLists", null, new {@class="btn btn-outline-secondary" })
+                                </td>
+                                
                             <td> @Html.DisplayFor(modelItem => item.AccountId)</td>
                         <td>已完成</td>
                             <td> @Html.DisplayFor(modelItem => item.TaskNameId)</td>
@@ -240,9 +244,11 @@
                                 @Html.DisplayFor(modelItem => item.Address)
                             </td>
                             <td> @Html.DisplayFor(modelItem => item.Payment.PaymentId)</td>
-                                <td> @Html.ActionLink("評價","Create","ExpertRatings",null,new{ @class="btnResume"} )</td>
-                        <td>評價分數</td>
-                        <td>評價內容</td>
+                                <td style="width:100px; padding:0;padding-block-start:5px">
+                                    @Html.ActionLink("評價","Create","ExpertRatings", null, new {@class="btn btn-outline-secondary" })
+                                </td>
+                        <td>尚未評價</td>
+                                <td>尚未評價內容</td>
 
                     </tr>
                     }
@@ -337,7 +343,9 @@
                         <tr>
                            
                             <td> @Html.DisplayFor(modelItem => item.AccountId)</td>
-                                <td> @Html.ActionLink("檢視","DetailsView","ExpertTaskLists",null )</td>
+                                <td style="width:100px; padding:0;padding-block-start:5px">
+                                    @Html.ActionLink("檢視","DetailsView","ExpertTaskLists", null, new {@class="btn btn-outline-secondary" })
+                                </td>
                             <td> @Html.DisplayFor(modelItem => item.TaskNameId)</td>
                             <td>@Html.DisplayFor(modelItem => item.TaskDetail)</td>
                             <td>委託截止日</td>
@@ -349,9 +357,11 @@
                                 @Html.DisplayFor(modelItem => item.Address)
                             </td>
                             <td> @Html.DisplayFor(modelItem => item.Payment.PaymentId)</td>
-                                <td> @Html.ActionLink("評價","Create","ExpertRatings",null,new{ @class="btnResume"} )</td>
-                            <td>評價分數</td>
-                            <td>評價內容</td>
+                                <td style="width:100px; padding:0;padding-block-start:5px">
+                                    @Html.ActionLink("評價","Create","ExpertRatings", null, new {@class="btn btn-outline-secondary" })
+                                </td>
+                                <td>尚未評價</td>
+                                <td>尚未評價內容</td>
 
                         </tr>
                     }
