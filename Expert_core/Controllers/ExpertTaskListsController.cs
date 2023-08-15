@@ -28,6 +28,7 @@ namespace Expert_core.Controllers
 
         public async Task<IActionResult> DetailsAlert(int? id)//修改
         {
+            id = 13;
             if (id == null || _context.TaskLists == null)
             {
                 //return NotFound();
@@ -44,7 +45,7 @@ namespace Expert_core.Controllers
             ViewData["PaymentDateId"] = new SelectList(_context.PaymentDates, "PaymentDateId", "PaymentDateId", taskList.PaymentDateId);
             ViewData["SalaryId"] = new SelectList(_context.Salaries, "SalaryId", "SalaryId", taskList.SalaryId);
             ViewData["TownId"] = new SelectList(_context.Towns, "TownId", "TownId", taskList.TownId);
-            return View(/*taskList*/);
+            return View(taskList);
         }
 
         // POST: ExpertTaskLists/DetailsAlert/5
